@@ -36,7 +36,11 @@
 <li>If you can't connect, check your directory permissions on your virtual machine!&nbsp;</li>
 <li>Again, follow instructions and don't skip a step!</li>
 </ol>
-<p>The annoying thing I've experienced with AWS is that every time you stop and restart an instance, you get assigned a new public DNS for your instance (e.g. public DNS = ec2-52-41-144-22.us-west-2.compute.amazonaws.com). You can get around this by associating ypur instance with an Elastic IP. Steps are outlined <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">here</a>. Once you've associated the Elastic IP with a running instance, you can ssh into the VM with the Elastic IP but using the previous public key generated for the instance.</p> MS Azure on the other hand, let's you choose your on public DNS hostname which reduces the need for this workaround. 
+<p><b></n>Elastic IPs</b></p>
+<p>The annoying thing I've experienced with AWS is that every time you stop and restart an instance, you get assigned a new public DNS for your instance (e.g. public DNS = ec2-52-41-144-22.us-west-2.compute.amazonaws.com). You can get around this by associating ypur instance with an Elastic IP. Steps are outlined <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">here</a>. Once you've associated the Elastic IP with a running instance, you can ssh into the VM with the Elastic IP but using the previous public key generated for the instance. Don't forget to update the vsftpd.conf with your new Elastic IP address which is now your public address. 
+  
+ <p>`test`</p>
+<p>MS Azure on the other hand, let's you choose your on public DNS hostname which reduces the need for this workaround.</p>
 
       </section>
       <footer>
