@@ -25,7 +25,7 @@
       </header>
       <section>
     <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"></a>VM and FTP Setup on AWS</h3>
-<p>Setting a virtual machine in the cloud is easy!</p>
+<p> Overview: Create a virtual machine, install the ftp server and setup user accounts. Bonus: Bind your EC2 instance to an Elastic IP so you can reuse the same public IP even if your instance changes!</p>
 <ol>
 <li>Sign up for a free AWS account <a href="https://aws.amazon.com/free">here</a>. Usage and free tier information available <a href="https://aws.amazon.com/free/?sc_ichannel=ha&amp;amp;sc_ipage=signin&amp;amp;sc_iplace=body_link_text&amp;amp;sc_icampaigntype=free_tier&amp;amp;sc_icampaign=ha_en_free_tier_signin_2014_03">here</a>. You will need to provide credit card information, but won't be billed unless you exceed the free tier usage&nbsp;limits. Don't worry, you can set up alarms to alert you when you're near the limit! More on that later.&nbsp;</li>
 <li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html">This recipe</a>&nbsp;from AWS is straightforward. Print it out and don't skip a step. An EC2 (elastic compute cloud) is your virtual computing environment i.e. your virtual machine. This video by Microwave Sam expands on the EC2 setup.&nbsp;<br /><br /><iframe style="display: block; margin-left: auto; margin-right: auto;" src="//www.youtube.com/embed/wNr7YqjjzOY" width="425" height="350"></iframe></li>
@@ -36,6 +36,7 @@
 <li>If you can't connect, check your directory permissions on your virtual machine!&nbsp;</li>
 <li>Again, follow instructions and don't skip a step!</li>
 </ol>
+<p>The annoying thing I've experienced with AWS is that every time you stop and restart an instance, you get assigned a new public DNS for your instance (e.g. public DNS = ec2-52-41-144-22.us-west-2.compute.amazonaws.com). You can get around this by associating ypur instance with an Elastic IP. Steps are outlined <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">here</a>. Once you've associated the Elastic IP with a running instance, you can ssh into the VM with the Elastic IP but using the previous public key generated for the instance.</p> MS Azure on the other hand, let's you choose your on public DNS hostname which reduces the need for this workaround. 
 
       </section>
       <footer>
