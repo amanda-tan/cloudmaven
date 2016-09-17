@@ -322,3 +322,12 @@ footer {
     color:#444;
   }
 }
+
+code { 
+    background: hsl(220, 80%, 90%); 
+}
+
+pre {
+    white-space: pre-wrap;
+    background: hsl(30,80%,90%);
+}
